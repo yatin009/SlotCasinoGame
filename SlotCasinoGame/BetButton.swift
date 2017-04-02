@@ -14,7 +14,7 @@ class BetButton: SKSpriteNode {
     init() {
         let texture = SKTexture(image: #imageLiteral(resourceName: "BET_MAX"))
         super.init(texture: texture, color: .white, size: CGSize(width: 150, height: 120))
-        self.position = CGPoint(x: -100, y: -380)
+        self.position = CGPoint(x: -90, y: -385)
         
     }
     
