@@ -72,7 +72,7 @@ class GameScene: SKScene {
     func touchMoved(toPoint pos : CGPoint) {}
     
     func touchUp(atPoint pos : CGPoint) {
-        if (self.spinButtonSprite?.contains(pos))! && playerBet > 0{
+        if (self.spinButtonSprite?.contains(pos))! && playerBet > 0 && !isSpining{
             slotMachineSprite?.jackpotLabel.text = "Play your luck"
             spinReels()
             print("spinButton Tapped")
@@ -103,6 +103,7 @@ class GameScene: SKScene {
             time = 0
             checkBet(firstValue: firstValue, secondValue: secondValue, thirdValue: thirdValue)
             isSpining = false
+            return
         } else {time += 0.2}
         
         firstValue = Int(arc4random_uniform(UInt32(slotBetImages.count)))
