@@ -22,6 +22,7 @@ class GameScene: SKScene {
     var reelThreeSprite :ReelThree?
     var resetButtonSprite :ResetButton?
     var betButtonSprite :BetButton?
+    var betOneButtonSprite :BetOneButton?
     
     var playerMoney = 1000;
     var winnings = 0;
@@ -61,50 +62,65 @@ class GameScene: SKScene {
         betButtonSprite?.zPosition = 1
         self.addChild(betButtonSprite!)
         
-    }
-    
-    
-    func touchDown(atPoint pos : CGPoint) {
+        betOneButtonSprite = BetOneButton()
+        betOneButtonSprite?.zPosition = 1
+        self.addChild(betOneButtonSprite!)
         
     }
     
-    func touchMoved(toPoint pos : CGPoint) {
-        
-    }
+    func touchDown(atPoint pos : CGPoint) {}
+    func touchMoved(toPoint pos : CGPoint) {}
     
     func touchUp(atPoint pos : CGPoint) {
         if (self.spinButtonSprite?.contains(pos))! && playerBet > 0{
-            slotMachineSprite?.jackpotLabel.text = "Play Ur Luck"
-            isSpining = true
+            slotMachineSprite?.jackpotLabel.text = "Play your luck"
             spinReels()
             print("spinButton Tapped")
-        }else if(self.betButtonSprite?.contains(pos))!{
-            bet()
-        }else if(self.resetButtonSprite?.contains(pos))!{
+        } else if(self.betButtonSprite?.contains(pos))!{
+            bet(amount: 25)
+        } else if(self.betOneButtonSprite?.contains(pos))!{
+            bet(amount: 1)
+        } else if(self.resetButtonSprite?.contains(pos))!{
             resetAll()
         }
     }
     
-    func spinReels(){
-        let firstValue = Int(arc4random_uniform(UInt32(slotBetImages.count)))
-        reelOneSprite?.texture = SKTexture(image: slotBetImages[firstValue])
-        
-        let secondValue = Int(arc4random_uniform(UInt32(slotBetImages.count)))
-        reelTwoSprite?.texture = SKTexture(image: slotBetImages[secondValue])
-        
-        let thirdValue = Int(arc4random_uniform(UInt32(slotBetImages.count)))
-        reelThreeSprite?.texture = SKTexture(image: slotBetImages[thirdValue])
-
-        checkBet(firstValue: firstValue, secondValue: secondValue, thirdValue: thirdValue)
-        
-        isSpining = false
+    var time: Double = 0
+    var firstValue: Int = 0
+    var secondValue: Int = 0
+    var thirdValue: Int = 0
+    var timer: Timer?
+    
+    func spinReels() {
+        isSpining = true
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(GameScene.randomizeReels), userInfo: nil, repeats: true)
     }
     
-    func checkBet(firstValue : Int, secondValue : Int, thirdValue : Int){
+    func randomizeReels() {
+        
+        if (time > 6) {
+            timer!.invalidate()
+            time = 0
+            checkBet(firstValue: firstValue, secondValue: secondValue, thirdValue: thirdValue)
+            isSpining = false
+        } else {time += 0.2}
+        
+        firstValue = Int(arc4random_uniform(UInt32(slotBetImages.count)))
+        reelOneSprite?.texture = SKTexture(image: slotBetImages[firstValue])
+        
+        secondValue = Int(arc4random_uniform(UInt32(slotBetImages.count)))
+        reelTwoSprite?.texture = SKTexture(image: slotBetImages[secondValue])
+        
+        thirdValue = Int(arc4random_uniform(UInt32(slotBetImages.count)))
+        reelThreeSprite?.texture = SKTexture(image: slotBetImages[thirdValue])
+
+    }
+    
+    func checkBet(firstValue : Int, secondValue : Int, thirdValue : Int) {
         print("First Value >> ", firstValue)
         print("Second Value >> ", secondValue)
-        print("third Value >> ", thirdValue)
-        if(firstValue == secondValue && secondValue == thirdValue){
+        print("Third Value >> ", thirdValue)
+        if(firstValue == secondValue && secondValue == thirdValue) {
             print("JACKPOT")
             slotMachineSprite?.jackpotLabel.text = "You Won"
             winnings = winnings + jackpot
@@ -114,9 +130,9 @@ class GameScene: SKScene {
             slotMachineSprite?.betLabel.text = "0"
             slotMachineSprite?.winLabel.text = String(winnings)
             slotMachineSprite?.totalLabel.text = String(playerMoney)
-        }else if(firstValue == 7 && secondValue == 7 && thirdValue == 7){
+        } else if(firstValue == 7 && secondValue == 7 && thirdValue == 7) {
             print("LOST ALL, GAME OVER")
-        }else if(firstValue == secondValue || secondValue == thirdValue || firstValue == thirdValue){
+        } else if(firstValue == secondValue || secondValue == thirdValue || firstValue == thirdValue) {
             winnings = winnings + 50
             playerBet = 0
             playerMoney = playerMoney + 50
@@ -124,20 +140,20 @@ class GameScene: SKScene {
             slotMachineSprite?.betLabel.text = "0"
             slotMachineSprite?.winLabel.text = String(winnings)
             slotMachineSprite?.totalLabel.text = String(playerMoney)
-        }else{
+        } else {
             playerBet = 0
             slotMachineSprite?.betLabel.text = "0"
             slotMachineSprite?.totalLabel.text = String(playerMoney)
         }
     }
     
-    func bet(){
-        if(playerMoney < 25){
+    func bet(amount: Int) {
+        if(playerMoney < amount) {
             print("No more money")
             return
         }
-        playerMoney = playerMoney - 25
-        playerBet = playerBet + 25
+        playerMoney = playerMoney - amount
+        playerBet = playerBet + amount
         
         slotMachineSprite?.totalLabel.text = String(playerMoney)
         slotMachineSprite?.betLabel.text = String(playerBet)
@@ -145,7 +161,7 @@ class GameScene: SKScene {
     
     /* Utility function to reset the player stats */
     func resetAll() {
-        slotMachineSprite?.jackpotLabel.text = "Play Ur Luck"
+        slotMachineSprite?.jackpotLabel.text = "Play your luck"
         playerMoney = 1000;
         winnings = 0;
         jackpot = 5000;
@@ -157,8 +173,6 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
     }
     
@@ -172,10 +186,5 @@ class GameScene: SKScene {
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    // Game Loop - trigger 60FPS
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
     }
 }

@@ -14,7 +14,7 @@ class SlotMachine: SKSpriteNode {
     let jackpotLabel: SKLabelNode = {
         let label = SKLabelNode()
         label.text = "Play"
-        label.fontSize = 34
+        label.fontSize = 30
         label.fontName = "Helvetica Neue"
         label.fontColor = SKColor(red: 255/255, green: 229/255, blue: 171/255, alpha: 1)
         label.horizontalAlignmentMode = .center

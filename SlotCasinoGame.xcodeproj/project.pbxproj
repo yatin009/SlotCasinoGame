@@ -23,6 +23,7 @@
 		809893291E8DA44F005C49C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809893281E8DA44F005C49C7 /* Assets.xcassets */; };
 		80E0B2601E904B6E00CD7AC9 /* ResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0B25F1E904B6E00CD7AC9 /* ResetButton.swift */; };
 		80E0B2621E90510000CD7AC9 /* BetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0B2611E90510000CD7AC9 /* BetButton.swift */; };
+		943D8DA11E91804000D66748 /* BetOneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943D8DA01E91804000D66748 /* BetOneButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		809893281E8DA44F005C49C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80E0B25F1E904B6E00CD7AC9 /* ResetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetButton.swift; sourceTree = "<group>"; };
 		80E0B2611E90510000CD7AC9 /* BetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetButton.swift; sourceTree = "<group>"; };
+		943D8DA01E91804000D66748 /* BetOneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetOneButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				80026BAB1E902FAC005B597B /* ReelThree.swift */,
 				80E0B25F1E904B6E00CD7AC9 /* ResetButton.swift */,
 				80E0B2611E90510000CD7AC9 /* BetButton.swift */,
+				943D8DA01E91804000D66748 /* BetOneButton.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				8098930B1E8D8B9F005C49C7 /* GameScene.swift in Sources */,
 				80026BAA1E902F9E005B597B /* ReelTwo.swift in Sources */,
 				80026BA81E902F95005B597B /* ReelOne.swift in Sources */,
+				943D8DA11E91804000D66748 /* BetOneButton.swift in Sources */,
 				80E0B2601E904B6E00CD7AC9 /* ResetButton.swift in Sources */,
 				80E0B2621E90510000CD7AC9 /* BetButton.swift in Sources */,
 				8098930D1E8D8B9F005C49C7 /* GameViewController.swift in Sources */,
