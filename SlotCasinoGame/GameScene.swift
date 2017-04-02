@@ -131,6 +131,7 @@ class GameScene: SKScene {
             slotMachineSprite?.betLabel.text = "0"
             slotMachineSprite?.winLabel.text = String(winnings)
             slotMachineSprite?.totalLabel.text = String(playerMoney)
+            
         } else if(firstValue == 7 && secondValue == 7 && thirdValue == 7) {
             print("LOST ALL, GAME OVER")
         } else if(firstValue == secondValue || secondValue == thirdValue || firstValue == thirdValue) {
@@ -149,9 +150,15 @@ class GameScene: SKScene {
     }
     
     func bet(amount: Int) {
+        var amount = amount
         if(playerMoney < amount) {
             print("No more money")
+            slotMachineSprite?.jackpotLabel.text = "No more money"
             return
+        } else if (playerBet + amount > 25) {
+            print("Bet limit 25")
+            slotMachineSprite?.jackpotLabel.text = "Bet limit 25"
+            amount = 25 - playerBet
         }
         playerMoney = playerMoney - amount
         playerBet = playerBet + amount
