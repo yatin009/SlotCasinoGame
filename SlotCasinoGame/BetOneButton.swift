@@ -9,6 +9,8 @@
 import SpriteKit
 import GameplayKit
 
+//MIN. BET BUTTON SKNODE
+
 class BetOneButton: SKSpriteNode {
     // Constructor / initialize
     init() {

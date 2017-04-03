@@ -9,6 +9,7 @@
 import SpriteKit
 import GameplayKit
 
+//REEL TWO SKNODE
 class ReelTwo: SKSpriteNode {
     // Constructor / initialize
     init() {

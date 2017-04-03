@@ -11,6 +11,7 @@ import GameplayKit
 
 class SlotMachine: SKSpriteNode {
     
+//    Jackpot label SkNode
     let jackpotLabel: SKLabelNode = {
         let label = SKLabelNode()
         label.text = "Play"
@@ -22,7 +23,8 @@ class SlotMachine: SKSpriteNode {
         label.zPosition = 1
         return label
     }()
-    
+
+//    Total player money label SkNode
     let totalLabel: SKLabelNode = {
         let label = SKLabelNode()
         label.text = "1,000"
@@ -34,7 +36,8 @@ class SlotMachine: SKSpriteNode {
         label.zPosition = 1
         return label
     }()
-    
+
+//    Bet amount label SkNode
     let betLabel: SKLabelNode = {
         let label = SKLabelNode()
         label.text = "0"
@@ -47,6 +50,7 @@ class SlotMachine: SKSpriteNode {
         return label
     }()
     
+//    Amount won by player label SkNode
     let winLabel: SKLabelNode = {
         let label = SKLabelNode()
         label.text = "0"
@@ -63,6 +67,8 @@ class SlotMachine: SKSpriteNode {
     init() {
         let texture = SKTexture(image: #imageLiteral(resourceName: "slotmachine"))
         super.init(texture: texture, color: .white, size: #imageLiteral(resourceName: "slotmachine").size)
+        
+//       Adding labels to background image of Slot machine
         addChild(jackpotLabel)
         addChild(winLabel)
         addChild(betLabel)

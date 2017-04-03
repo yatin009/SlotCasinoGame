@@ -9,6 +9,8 @@
 import SpriteKit
 import GameplayKit
 
+//NOT USED 
+
 class GameObject: SKSpriteNode, GameProtocol {
     // Instance Variables
     var dy:CGFloat?

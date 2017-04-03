@@ -15,6 +15,7 @@ var screenHeight = screenSize.height
 
 class GameScene: SKScene {
     
+    //Instance variables of SKNoded class(UI elements)
     var slotMachineSprite : SlotMachine?
     var spinButtonSprite : SpinButton?
     var reelOneSprite :ReelOne?
@@ -24,16 +25,29 @@ class GameScene: SKScene {
     var betButtonSprite :BetButton?
     var betOneButtonSprite :BetOneButton?
     
+    //Player money track variables
     var playerMoney = 1000;
     var winnings = 0;
     var jackpot = 5000;
     var playerBet = 0;
     
+    var time: Double = 0
+    var firstValue: Int = 0
+    var secondValue: Int = 0
+    var thirdValue: Int = 0
+    var timer: Timer?
+    var sound: SKAudioNode = SKAudioNode(fileNamed: "spin.wav")
+    
+    // Boolean variable to track spining of reel
     var isSpining: Bool = false
     
+    // Array of Images to be used in Reels of slot machine
     var slotBetImages: [UIImage] = [#imageLiteral(resourceName: "bell"), #imageLiteral(resourceName: "orange"), #imageLiteral(resourceName: "grapes"), #imageLiteral(resourceName: "cherry"), #imageLiteral(resourceName: "banana"), #imageLiteral(resourceName: "bar"), #imageLiteral(resourceName: "seven"), #imageLiteral(resourceName: "blank")]
     
     override func didMove(to view: SKView) {
+        
+        //Initializing UI elements and adding to parent
+        
         slotMachineSprite = SlotMachine()
         slotMachineSprite?.zPosition = 0;
         self.addChild(slotMachineSprite!)
@@ -72,6 +86,7 @@ class GameScene: SKScene {
     func touchMoved(toPoint pos : CGPoint) {}
     
     func touchUp(atPoint pos : CGPoint) {
+        //Click listner for various button on UI
         if (self.spinButtonSprite?.contains(pos))! && playerBet > 0 && !isSpining{
             slotMachineSprite?.jackpotLabel.text = "Play your luck"
             spinReels()
@@ -85,15 +100,9 @@ class GameScene: SKScene {
         }
     }
     
-    var time: Double = 0
-    var firstValue: Int = 0
-    var secondValue: Int = 0
-    var thirdValue: Int = 0
-    var timer: Timer?
-    var sound: SKAudioNode = SKAudioNode(fileNamed: "spin.wav")
-    
     func spinReels() {
         isSpining = true
+        //Loop for creating spining effect. Changing images for 6 seconds
         timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(GameScene.randomizeReels), userInfo: nil, repeats: true)
         sound.autoplayLooped = false
         addChild(sound)
@@ -102,6 +111,7 @@ class GameScene: SKScene {
     
     func randomizeReels() {
         
+        // Condition check if 6 seconds has passed
         if (time > 6) {
             sound.run(SKAction.stop())
             timer!.invalidate()
@@ -122,6 +132,8 @@ class GameScene: SKScene {
         reelThreeSprite?.texture = SKTexture(image: slotBetImages[thirdValue])
 
     }
+    
+    //Betting Logic
     
     func checkBet(firstValue : Int, secondValue : Int, thirdValue : Int) {
         print("First Value >> ", firstValue)
@@ -154,6 +166,8 @@ class GameScene: SKScene {
             slotMachineSprite?.totalLabel.text = String(playerMoney)
         }
     }
+    
+    //Updating Labels
     
     func bet(amount: Int) {
         var amount = amount

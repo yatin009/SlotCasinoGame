@@ -9,6 +9,7 @@
 import SpriteKit
 import GameplayKit
 
+//REEL ONE SKNODE
 class ReelOne: SKSpriteNode {
     // Constructor / initialize
     init() {
