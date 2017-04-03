@@ -90,15 +90,20 @@ class GameScene: SKScene {
     var secondValue: Int = 0
     var thirdValue: Int = 0
     var timer: Timer?
+    var sound: SKAudioNode = SKAudioNode(fileNamed: "spin.wav")
     
     func spinReels() {
         isSpining = true
         timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(GameScene.randomizeReels), userInfo: nil, repeats: true)
+        sound.autoplayLooped = false
+        addChild(sound)
+        sound.run(SKAction.play())
     }
     
     func randomizeReels() {
         
         if (time > 6) {
+            sound.run(SKAction.stop())
             timer!.invalidate()
             time = 0
             checkBet(firstValue: firstValue, secondValue: secondValue, thirdValue: thirdValue)

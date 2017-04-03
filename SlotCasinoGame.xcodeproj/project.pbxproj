@@ -24,6 +24,7 @@
 		80E0B2601E904B6E00CD7AC9 /* ResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0B25F1E904B6E00CD7AC9 /* ResetButton.swift */; };
 		80E0B2621E90510000CD7AC9 /* BetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0B2611E90510000CD7AC9 /* BetButton.swift */; };
 		943D8DA11E91804000D66748 /* BetOneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943D8DA01E91804000D66748 /* BetOneButton.swift */; };
+		943D8DA31E91D54E00D66748 /* spin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 943D8DA21E91D54E00D66748 /* spin.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		80E0B25F1E904B6E00CD7AC9 /* ResetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetButton.swift; sourceTree = "<group>"; };
 		80E0B2611E90510000CD7AC9 /* BetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetButton.swift; sourceTree = "<group>"; };
 		943D8DA01E91804000D66748 /* BetOneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetOneButton.swift; sourceTree = "<group>"; };
+		943D8DA21E91D54E00D66748 /* spin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spin.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		809893031E8D8B9F005C49C7 /* SlotCasinoGame */ = {
 			isa = PBXGroup;
 			children = (
+				943D8DA21E91D54E00D66748 /* spin.wav */,
 				809893211E8DA2AE005C49C7 /* Protocol */,
 				8098931C1E8DA156005C49C7 /* Objects */,
 				809893041E8D8B9F005C49C7 /* AppDelegate.swift */,
@@ -176,6 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				943D8DA31E91D54E00D66748 /* spin.wav in Resources */,
 				809893101E8D8B9F005C49C7 /* Main.storyboard in Resources */,
 				809893071E8D8B9F005C49C7 /* GameScene.sks in Resources */,
 				809893291E8DA44F005C49C7 /* Assets.xcassets in Resources */,
