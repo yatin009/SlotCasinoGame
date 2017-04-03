@@ -108,6 +108,7 @@ class GameScene: SKScene {
             time = 0
             checkBet(firstValue: firstValue, secondValue: secondValue, thirdValue: thirdValue)
             isSpining = false
+            sound.removeFromParent()
             return
         } else {time += 0.2}
         
