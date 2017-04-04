@@ -20,7 +20,7 @@
 		8098931E1E8DA175005C49C7 /* SlotMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8098931D1E8DA175005C49C7 /* SlotMachine.swift */; };
 		809893201E8DA291005C49C7 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8098931F1E8DA291005C49C7 /* GameObject.swift */; };
 		809893231E8DA2BD005C49C7 /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809893221E8DA2BD005C49C7 /* GameProtocol.swift */; };
-		809893291E8DA44F005C49C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809893281E8DA44F005C49C7 /* Assets.xcassets */; };
+		809893291E8DA44F005C49C7 /* babch.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809893281E8DA44F005C49C7 /* babch.xcassets */; };
 		80E0B2601E904B6E00CD7AC9 /* ResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0B25F1E904B6E00CD7AC9 /* ResetButton.swift */; };
 		80E0B2621E90510000CD7AC9 /* BetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0B2611E90510000CD7AC9 /* BetButton.swift */; };
 		943D8DA11E91804000D66748 /* BetOneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943D8DA01E91804000D66748 /* BetOneButton.swift */; };
@@ -43,7 +43,7 @@
 		8098931D1E8DA175005C49C7 /* SlotMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMachine.swift; sourceTree = "<group>"; };
 		8098931F1E8DA291005C49C7 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		809893221E8DA2BD005C49C7 /* GameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
-		809893281E8DA44F005C49C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		809893281E8DA44F005C49C7 /* babch.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = babch.xcassets; sourceTree = "<group>"; };
 		80E0B25F1E904B6E00CD7AC9 /* ResetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetButton.swift; sourceTree = "<group>"; };
 		80E0B2611E90510000CD7AC9 /* BetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetButton.swift; sourceTree = "<group>"; };
 		943D8DA01E91804000D66748 /* BetOneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetOneButton.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 				8098930E1E8D8B9F005C49C7 /* Main.storyboard */,
 				809893131E8D8B9F005C49C7 /* LaunchScreen.storyboard */,
 				809893161E8D8B9F005C49C7 /* Info.plist */,
-				809893281E8DA44F005C49C7 /* Assets.xcassets */,
+				809893281E8DA44F005C49C7 /* babch.xcassets */,
 			);
 			path = SlotCasinoGame;
 			sourceTree = "<group>";
@@ -182,7 +182,7 @@
 				943D8DA31E91D54E00D66748 /* spin.wav in Resources */,
 				809893101E8D8B9F005C49C7 /* Main.storyboard in Resources */,
 				809893071E8D8B9F005C49C7 /* GameScene.sks in Resources */,
-				809893291E8DA44F005C49C7 /* Assets.xcassets in Resources */,
+				809893291E8DA44F005C49C7 /* babch.xcassets in Resources */,
 				809893151E8D8B9F005C49C7 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

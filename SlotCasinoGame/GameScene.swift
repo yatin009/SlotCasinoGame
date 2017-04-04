@@ -153,9 +153,9 @@ class GameScene: SKScene {
         } else if(firstValue == 7 && secondValue == 7 && thirdValue == 7) {
             print("LOST ALL, GAME OVER")
         } else if(firstValue == secondValue || secondValue == thirdValue || firstValue == thirdValue) {
-            winnings = winnings + 50
+            winnings = winnings + (playerBet*2)
+            playerMoney = playerMoney + (playerBet*2)
             playerBet = 0
-            playerMoney = playerMoney + 50
             
             slotMachineSprite?.betLabel.text = "0"
             slotMachineSprite?.winLabel.text = String(winnings)
