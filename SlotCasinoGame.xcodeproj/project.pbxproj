@@ -11,6 +11,8 @@
 		80026BA81E902F95005B597B /* ReelOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80026BA71E902F95005B597B /* ReelOne.swift */; };
 		80026BAA1E902F9E005B597B /* ReelTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80026BA91E902F9E005B597B /* ReelTwo.swift */; };
 		80026BAC1E902FAC005B597B /* ReelThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80026BAB1E902FAC005B597B /* ReelThree.swift */; };
+		8041FEC31E94796500AB1D40 /* QuitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041FEC21E94796500AB1D40 /* QuitButton.swift */; };
+		8041FEC91E947A5400AB1D40 /* QuitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041FEC81E947A5400AB1D40 /* QuitScene.swift */; };
 		809893051E8D8B9F005C49C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809893041E8D8B9F005C49C7 /* AppDelegate.swift */; };
 		809893071E8D8B9F005C49C7 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 809893061E8D8B9F005C49C7 /* GameScene.sks */; };
 		8098930B1E8D8B9F005C49C7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8098930A1E8D8B9F005C49C7 /* GameScene.swift */; };
@@ -20,7 +22,7 @@
 		8098931E1E8DA175005C49C7 /* SlotMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8098931D1E8DA175005C49C7 /* SlotMachine.swift */; };
 		809893201E8DA291005C49C7 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8098931F1E8DA291005C49C7 /* GameObject.swift */; };
 		809893231E8DA2BD005C49C7 /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809893221E8DA2BD005C49C7 /* GameProtocol.swift */; };
-		809893291E8DA44F005C49C7 /* babch.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809893281E8DA44F005C49C7 /* babch.xcassets */; };
+		809893291E8DA44F005C49C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809893281E8DA44F005C49C7 /* Assets.xcassets */; };
 		80E0B2601E904B6E00CD7AC9 /* ResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0B25F1E904B6E00CD7AC9 /* ResetButton.swift */; };
 		80E0B2621E90510000CD7AC9 /* BetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0B2611E90510000CD7AC9 /* BetButton.swift */; };
 		943D8DA11E91804000D66748 /* BetOneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943D8DA01E91804000D66748 /* BetOneButton.swift */; };
@@ -32,6 +34,8 @@
 		80026BA71E902F95005B597B /* ReelOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReelOne.swift; sourceTree = "<group>"; };
 		80026BA91E902F9E005B597B /* ReelTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReelTwo.swift; sourceTree = "<group>"; };
 		80026BAB1E902FAC005B597B /* ReelThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReelThree.swift; sourceTree = "<group>"; };
+		8041FEC21E94796500AB1D40 /* QuitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuitButton.swift; sourceTree = "<group>"; };
+		8041FEC81E947A5400AB1D40 /* QuitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuitScene.swift; sourceTree = "<group>"; };
 		809893011E8D8B9F005C49C7 /* SlotCasinoGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotCasinoGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809893041E8D8B9F005C49C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		809893061E8D8B9F005C49C7 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -43,7 +47,7 @@
 		8098931D1E8DA175005C49C7 /* SlotMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMachine.swift; sourceTree = "<group>"; };
 		8098931F1E8DA291005C49C7 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		809893221E8DA2BD005C49C7 /* GameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
-		809893281E8DA44F005C49C7 /* babch.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = babch.xcassets; sourceTree = "<group>"; };
+		809893281E8DA44F005C49C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80E0B25F1E904B6E00CD7AC9 /* ResetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetButton.swift; sourceTree = "<group>"; };
 		80E0B2611E90510000CD7AC9 /* BetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetButton.swift; sourceTree = "<group>"; };
 		943D8DA01E91804000D66748 /* BetOneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetOneButton.swift; sourceTree = "<group>"; };
@@ -84,13 +88,14 @@
 				809893211E8DA2AE005C49C7 /* Protocol */,
 				8098931C1E8DA156005C49C7 /* Objects */,
 				809893041E8D8B9F005C49C7 /* AppDelegate.swift */,
+				8041FEC81E947A5400AB1D40 /* QuitScene.swift */,
 				809893061E8D8B9F005C49C7 /* GameScene.sks */,
 				8098930A1E8D8B9F005C49C7 /* GameScene.swift */,
 				8098930C1E8D8B9F005C49C7 /* GameViewController.swift */,
 				8098930E1E8D8B9F005C49C7 /* Main.storyboard */,
 				809893131E8D8B9F005C49C7 /* LaunchScreen.storyboard */,
 				809893161E8D8B9F005C49C7 /* Info.plist */,
-				809893281E8DA44F005C49C7 /* babch.xcassets */,
+				809893281E8DA44F005C49C7 /* Assets.xcassets */,
 			);
 			path = SlotCasinoGame;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 				80E0B25F1E904B6E00CD7AC9 /* ResetButton.swift */,
 				80E0B2611E90510000CD7AC9 /* BetButton.swift */,
 				943D8DA01E91804000D66748 /* BetOneButton.swift */,
+				8041FEC21E94796500AB1D40 /* QuitButton.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -182,7 +188,7 @@
 				943D8DA31E91D54E00D66748 /* spin.wav in Resources */,
 				809893101E8D8B9F005C49C7 /* Main.storyboard in Resources */,
 				809893071E8D8B9F005C49C7 /* GameScene.sks in Resources */,
-				809893291E8DA44F005C49C7 /* babch.xcassets in Resources */,
+				809893291E8DA44F005C49C7 /* Assets.xcassets in Resources */,
 				809893151E8D8B9F005C49C7 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,12 +206,14 @@
 				80026BA81E902F95005B597B /* ReelOne.swift in Sources */,
 				943D8DA11E91804000D66748 /* BetOneButton.swift in Sources */,
 				80E0B2601E904B6E00CD7AC9 /* ResetButton.swift in Sources */,
+				8041FEC31E94796500AB1D40 /* QuitButton.swift in Sources */,
 				80E0B2621E90510000CD7AC9 /* BetButton.swift in Sources */,
 				8098930D1E8D8B9F005C49C7 /* GameViewController.swift in Sources */,
 				809893051E8D8B9F005C49C7 /* AppDelegate.swift in Sources */,
 				80026BAC1E902FAC005B597B /* ReelThree.swift in Sources */,
 				8098931E1E8DA175005C49C7 /* SlotMachine.swift in Sources */,
 				809893201E8DA291005C49C7 /* GameObject.swift in Sources */,
+				8041FEC91E947A5400AB1D40 /* QuitScene.swift in Sources */,
 				809893231E8DA2BD005C49C7 /* GameProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,7 +339,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2BULHRS882;
 				INFOPLIST_FILE = SlotCasinoGame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mapd.124.SlotCasinoGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2BULHRS882;
 				INFOPLIST_FILE = SlotCasinoGame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mapd.124.SlotCasinoGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";

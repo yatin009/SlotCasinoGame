@@ -24,6 +24,7 @@ class GameScene: SKScene {
     var resetButtonSprite :ResetButton?
     var betButtonSprite :BetButton?
     var betOneButtonSprite :BetOneButton?
+    var quitButtonSprite :QuitButton?
     
     //Player money track variables
     var playerMoney = 1000;
@@ -80,6 +81,10 @@ class GameScene: SKScene {
         betOneButtonSprite?.zPosition = 1
         self.addChild(betOneButtonSprite!)
         
+        quitButtonSprite = QuitButton()
+        quitButtonSprite?.zPosition = 1
+        self.addChild(quitButtonSprite!)
+        
     }
     
     func touchDown(atPoint pos : CGPoint) {}
@@ -97,6 +102,8 @@ class GameScene: SKScene {
             bet(amount: 1)
         } else if(self.resetButtonSprite?.contains(pos))!{
             resetAll()
+        } else if(self.quitButtonSprite?.contains(pos))!{
+            quit()
         }
     }
     
@@ -199,6 +206,10 @@ class GameScene: SKScene {
         slotMachineSprite?.betLabel.text = String(playerBet)
         slotMachineSprite?.totalLabel.text = String(playerMoney)
     }
+    
+    func quit(){
+        let quitScene = QuitScene(size: (self.view?.frame.size)!)
+        self.scene?.view?.presentScene(quitScene)    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
