@@ -113,6 +113,7 @@ class GameScene: SKScene {
         timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(GameScene.randomizeReels), userInfo: nil, repeats: true)
         sound.autoplayLooped = false
         addChild(sound)
+        print("Play sound")
         sound.run(SKAction.play())
     }
     
@@ -120,6 +121,7 @@ class GameScene: SKScene {
         
         // Condition check if 6 seconds has passed
         if (time > 6) {
+            print("Stop sound")
             sound.run(SKAction.stop())
             timer!.invalidate()
             time = 0
